@@ -3,14 +3,14 @@ const router = express.Router();
 const authController = require("../controllers/auth");
 const homeController = require("../controllers/home");
 const postsController = require("../controllers/posts");
-const commentController = require("../controllers/comment")
+const meetupsController = require("../controllers/meetups");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Main Routes - simplified for now
 router.get("/", homeController.getIndex);
 router.get("/profile", ensureAuth, postsController.getProfile);
 router.get("/feed", ensureAuth, postsController.getFeed);
-router.get("/meetups", ensureAuth, meetupController.getMeetups)
+// router.get("/meetups", ensureAuth, meetupsController.getMeetups)
 router.get("/login", authController.getLogin);
 router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);

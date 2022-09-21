@@ -5,10 +5,12 @@ const groupsController = require("../controllers/groups");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Group Routes
-router.get("/:id", ensureAuth, groupsController.getGroup);
+// router.get("/:id", ensureAuth, groupsController.getGroup);
 
-router.get("/:id/feed",ensureAuth, groupsController.getFeed);
+// router.get("/:id/feed",ensureAuth, groupsController.getFeed);
 
-router.post("/createGroup", upload.single("file"), groupsController.createGroup);
+// router.post("/createGroup", upload.single("file"), groupsController.createGroup);
 
-router.put("/")
+// router.put("/join/:id", ensureAuth, groupsController.join);
+
+module.exports = router
