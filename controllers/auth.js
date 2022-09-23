@@ -65,6 +65,12 @@ exports.getSignup = (req, res) => {
   });
 };
 
+// exports.postSignup = (req, res, next) => {
+
+// console.log(req.body)
+//   res.redirect("/");
+// }
+
 exports.postSignup = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
@@ -88,6 +94,7 @@ exports.postSignup = (req, res, next) => {
     userName: req.body.userName,
     email: req.body.email,
     password: req.body.password,
+
   });
 
   User.findOne(

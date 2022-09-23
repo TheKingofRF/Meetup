@@ -62,7 +62,15 @@ app.use("/post", postRoutes);
 app.use("/comment",commentsRoutes)
 app.use("/meetup", meetupRoutes)
 app.use("/group", groupRoutes)
-
+app.get("/map", async (req, res,)=> {
+  try {
+    res.render('map.ejs')
+  } catch (err) {
+      console.log(err)
+      res.status(500).send('its dead jimmy')
+  }
+}
+)
 //Server Running
 app.listen(process.env.PORT ||2121, () => {
     console.log("Server is running, for now...💋");

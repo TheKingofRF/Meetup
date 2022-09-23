@@ -1,0 +1,107 @@
+<%- include('partials/header') -%>
+
+<main class="container">
+    <div class="row">
+
+        
+        <div class="col-md-6 offset-md-3 ">
+                <% if (locals.messages.errors) { %>
+                    <% messages.errors.forEach( el => { %>
+                        <div class="alert alert-danger"><%= el.msg %></div>
+                    <% }) %>    
+                <% } %>
+                <% if (locals.messages.info) { %>
+                    <% messages.info.forEach( el => { %>
+                        <div class="alert alert-info"><%= el.msg %></div>
+                    <% }) %>    
+                <% } %>
+                <form action="/signup" method="POST">
+                    <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input name="username" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                    <input name="confirmPassword" type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+    
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Basketball </label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Bowling </label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Darts</label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Football</label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Frisbee </label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Golf </label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Handball</label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Hiking</label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Pickleball</label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Pool </label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Running </label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Soccer</label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Tennis</label>
+                  </div>
+                  <div class="form-check form-switch form-check-inline">
+                    <input name="sport" value="weightlifting" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Weightlifting</label>
+                  </div>
+                  <div class="mb-6">
+    
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                
+            </div>
+        </form>
+
+    </div>
+
+</main>
+    
+
+<%- include('partials/footer') -%>

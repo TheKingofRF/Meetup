@@ -4,7 +4,8 @@
   "description": "An app for making connections between athletes",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "express": "^4.17.1",
     "express-flash": "^0.0.2",
     "express-session": "^1.17.1",
+    "mapbox-gl": "^2.10.0",
     "method-override": "^3.0.0",
     "mongodb": "^3.6.5",
     "mongoose": "^5.12.3",
